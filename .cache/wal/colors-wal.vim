@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/bran/Pictures/Wallpapers/cat-sound.png"
+let background = "#12121b"
+let foreground = "#e6d2f1"
+let cursor     = "#e6d2f1"
+
+" Colors
+let color0  = "#12121b"
+let color1  = "#F8BD96"
+let color2  = "#F18EAC"
+let color3  = "#9FD7A7"
+let color4  = "#ABE9B3"
+let color5  = "#9AB0D2"
+let color6  = "#DDB6F2"
+let color7  = "#e6d2f1"
+let color8  = "#a193a8"
+let color9  = "#F8BD96"
+let color10 = "#F18EAC"
+let color11 = "#9FD7A7"
+let color12 = "#ABE9B3"
+let color13 = "#9AB0D2"
+let color14 = "#DDB6F2"
+let color15 = "#e6d2f1"

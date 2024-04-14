@@ -31,3 +31,4 @@ Pictures/Wallpapers
 .config/micro
 .config/neofetch
 .config/deluge
+.cache/wal

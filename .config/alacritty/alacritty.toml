@@ -1,34 +1,12 @@
+import = ["~/.cache/wal/alacritty-colors.toml"]
+
 live_config_reload = true
 save_to_clipboard = true
-theme = "Dracula"
+theme = "Wal"
 "window.dynamic_title" = true
 
 [colors]
 draw_bold_text_with_bright_colors = true
-
-[colors.bright]
-black = "#575b70"
-blue = "#caa9fa"
-cyan = "#9aedfe"
-green = "#5af78e"
-magenta = "#ff92d0"
-red = "#ff6e67"
-white = "#e6e6e6"
-yellow = "#f4f99d"
-
-[colors.normal]
-black = "#000000"
-blue = "#caa9fa"
-cyan = "#8be9fd"
-green = "#50fa7b"
-magenta = "#ff79c6"
-red = "#ff5555"
-white = "#bfbfbf"
-yellow = "#f1fa8c"
-
-[colors.primary]
-background = "#000000"
-foreground = "#f8f8f2"
 
 [cursor]
 style = "Underline"
@@ -98,9 +76,6 @@ hide_when_typing = true
 [scrolling]
 history = 10000
 multiplier = 3
-
-[shell]
-program = "/usr/bin/fish"
 
 [window]
 decorations = "full"

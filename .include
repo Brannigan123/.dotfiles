@@ -32,3 +32,4 @@ Pictures/Wallpapers
 .config/neofetch
 .config/deluge
 .cache/wal
+.config/qtile

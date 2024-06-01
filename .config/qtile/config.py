@@ -75,8 +75,8 @@ screens = [
             [
                 modify(
                     AppName,
-                    default_name='Desktop',
-                    fmt=' {}  ',
+                    default_name=' Desktop ',
+                    fmt=' {} ',
                     format='{name}',
                     foreground=colors[0],
                     background=colors[4],

@@ -123,6 +123,12 @@ screens = [
                     decorations=[rounded_decoration]
                 ),
                 spacer1,
+                widget.PulseVolume(
+                    foreground=colors[4],
+                    background=colors[0],
+                    decorations=[rounded_decoration]
+                ),
+                spacer1,
                 widget.Visualiser(
                     bar_colour=colors[4],
                     background=colors[0],

@@ -47,9 +47,9 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
+    font="JetBrains Mono NL Medium",
     fontsize=12,
-    padding=4,
+    padding=8
 )
 extension_defaults = widget_defaults.copy()
 
@@ -75,6 +75,7 @@ screens = [
             [
                 modify(
                     AppName,
+                    font="Font Awesome 6 Brands Regular",
                     default_name=' Desktop ',
                     fmt=' {} ',
                     format='{name}',
@@ -86,7 +87,6 @@ screens = [
                 widget.GlobalMenu(
                     foreground=colors[0],
                     background=colors[1],
-                    padding=6,
                     decorations=[rounded_decoration],
                     menu_background=colors[0],
                     menu_foreground=colors[7],
@@ -120,34 +120,37 @@ screens = [
                     block_highlight_text_color=colors[0],
                     this_current_screen_border=colors[6],
                     highlight_method="block",
-                    decorations=[rounded_decoration]
+                    decorations=[rounded_decoration],
+                    padding=3,
                 ),
                 spacer1,
                 widget.PulseVolume(
                     foreground=colors[4],
                     background=colors[0],
-                    decorations=[rounded_decoration]
+                    decorations=[rounded_decoration],
                 ),
                 spacer1,
                 widget.Visualiser(
                     bar_colour=colors[4],
                     background=colors[0],
                     decorations=[rounded_decoration],
-                    width=60,
+                    width=64,
                 ),
                 spacer1,
                 widget.Clock(
-                    format="   %d.%m.%Y |   %H:%M:%S ",
+                    font="Symbols Nerd Font Mono",
+                    format="%d.%m.%Y  ⏽  %H:%M:%S",
                     foreground=colors[7],
                     background=colors[0],
-                    decorations=[rounded_decoration]
+                    decorations=[rounded_decoration],
                 ),
                 spacer1,
                 widget.QuickExit(
-                    default_text=' ',
+                    font="Symbols Nerd Font Mono",
+                    default_text=' ⏻ ',
                     foreground=colors[0],
                     background=colors[2],
-                    decorations=[rounded_decoration]
+                    decorations=[rounded_decoration],
                 ),
             ],
             28,

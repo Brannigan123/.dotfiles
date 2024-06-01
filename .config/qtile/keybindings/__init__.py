@@ -1,5 +1,4 @@
 from libqtile.config import Group, Key
-from libqtile.lazy import lazy
 
 import keybindings.workspace as ws
 import keybindings.windows as win

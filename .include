@@ -33,3 +33,4 @@ Pictures/Wallpapers
 .config/deluge
 .cache/wal
 .config/qtile
+.config/picom

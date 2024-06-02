@@ -58,7 +58,6 @@ rounded_decoration = RectDecoration(
     use_widget_background=True,
     radius=4,
     filled=True,
-    padding_y=0,
 )
 
 spacer0 = widget.Spacer(background="#000000.00")
@@ -129,12 +128,13 @@ screens = [
                     background=colors[0],
                     decorations=[rounded_decoration],
                 ),
-                spacer1,
                 widget.Visualiser(
+                    channels="stereo",
                     bar_colour=colors[4],
                     background=colors[0],
                     decorations=[rounded_decoration],
-                    width=64,
+                    bar_height=12,
+                    width=55,
                 ),
                 spacer1,
                 widget.Clock(

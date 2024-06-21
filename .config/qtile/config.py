@@ -1,4 +1,5 @@
-from qtile_extras import bar, layout, widget
+from libqtile import bar
+from qtile_extras import layout, widget
 from qtile_extras.widget.decorations import RectDecoration
 from qtile_extras.widget import modify
 from libqtile.config import Group, Match, Screen
@@ -104,7 +105,7 @@ screens = [
                 ),
                 spacer0,
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                widget.StatusNotifier(),
+                # widget.StatusNotifier(),
                 # widget.Systray(
                 #     foreground=colors[7],
                 #     decorations=[rounded_decoration],

@@ -34,3 +34,4 @@ Pictures/Wallpapers
 .cache/wal
 .config/qtile
 .config/picom
+.config/ChromiumPywal

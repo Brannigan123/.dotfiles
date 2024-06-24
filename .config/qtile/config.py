@@ -13,6 +13,10 @@ from bars.widgets.appname import AppName
 
 import os
 
+
+TRANSPARENT_HEX = "#000000.00"
+
+
 mod = "mod4"
 terminal = guess_terminal()
 
@@ -61,8 +65,8 @@ rounded_decoration = RectDecoration(
     filled=True,
 )
 
-spacer0 = widget.Spacer(background="#000000.00")
-spacer1 = widget.Spacer(background="#000000.00", length=8)
+spacer0 = widget.Spacer(background=TRANSPARENT_HEX)
+spacer1 = widget.Spacer(background=TRANSPARENT_HEX, length=8)
 
 with open(os.path.expanduser("~/.cache/wal/wal")) as f:
     wallpaper = os.path.expanduser(f.read().strip())

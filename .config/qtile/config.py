@@ -14,18 +14,17 @@ from bars.widgets.appname import AppName
 import os
 
 
-TRANSPARENT_HEX = "#000000.00"
-
-
 mod = "mod4"
 terminal = guess_terminal()
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(name=g[0], label=g[1]) for g in zip("123456789", "⓵⓶⓷⓸⓹⓺⓻⓼⓽")]
 
 keys = get_keybindings(mod, terminal, groups)
 mouse = get_mouse_bindings(mod)
 
 colors = get_colors()
+
+TRANSLUCENT_HEX = f"{colors[0]}.40"
 
 floating_layout = layout.Floating(
     border_focus=colors[2],
@@ -53,7 +52,7 @@ layouts = [
 
 widget_defaults = dict(
     font="JetBrains Mono NL Medium",
-    fontsize=12,
+    fontsize=10,
     padding=8
 )
 extension_defaults = widget_defaults.copy()
@@ -61,12 +60,13 @@ extension_defaults = widget_defaults.copy()
 rounded_decoration = RectDecoration(
     group=True,
     use_widget_background=True,
-    radius=4,
+    radius=10,
+    padding_y=6,
     filled=True,
 )
 
-spacer0 = widget.Spacer(background=TRANSPARENT_HEX)
-spacer1 = widget.Spacer(background=TRANSPARENT_HEX, length=8)
+spacer0 = widget.Spacer(background=TRANSLUCENT_HEX)
+spacer1 = widget.Spacer(background=TRANSLUCENT_HEX, length=8)
 
 with open(os.path.expanduser("~/.cache/wal/wal")) as f:
     wallpaper = os.path.expanduser(f.read().strip())
@@ -77,20 +77,22 @@ screens = [
         wallpaper_mode='fill',
         top=bar.Bar(
             [
+                spacer1,
                 modify(
                     AppName,
                     font="Font Awesome 6 Brands Regular",
-                    default_name=' Desktop ',
-                    fmt=' {} ',
+                    fontsize=10,
+                    default_name='Desktop',
+                    fmt='{}',
                     format='{name}',
-                    foreground=colors[0],
-                    background=colors[4],
+                    foreground=colors[7],
+                    background=f'{colors[6]}.20',
                     decorations=[rounded_decoration],
                 ),
                 spacer1,
                 widget.GlobalMenu(
-                    foreground=colors[0],
-                    background=colors[1],
+                    foreground=colors[7],
+                    background=f'{colors[6]}.20',
                     decorations=[rounded_decoration],
                     menu_background=colors[0],
                     menu_foreground=colors[7],
@@ -98,14 +100,6 @@ screens = [
                     separator_colour=colors[6],
                     menu_border=colors[7],
                     menu_border_width=1,
-                ),
-                spacer1, 
-                widget.CurrentLayoutIcon(
-                    foreground=colors[0],
-                    background=colors[2],
-                    use_mask=True,
-                    scale=0.65,
-                    decorations=[rounded_decoration],
                 ),
                 spacer0,
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
@@ -117,25 +111,25 @@ screens = [
                 # ),
                 spacer1,
                 widget.GroupBox(
-                    foreground=colors[6],
-                    background=colors[0],
-                    active=colors[1],
+                    fontsize=12,
+                    background=f'{colors[6]}.20',
+                    active=f'{colors[4]}.90',
                     inactive=colors[7],
-                    block_highlight_text_color=colors[0],
-                    this_current_screen_border=colors[6],
+                    block_highlight_text_color=colors[1],
+                    this_current_screen_border=f'{colors[6]}.00',
                     highlight_method="block",
                     decorations=[rounded_decoration],
-                    padding=3,
+                    padding=0,
                 ),
-                spacer1,
+                spacer0,
                 widget.PulseVolume(
-                    foreground=colors[4],
+                    foreground=colors[7],
                     background=colors[0],
                     decorations=[rounded_decoration],
                 ),
                 widget.Visualiser(
                     channels="stereo",
-                    bar_colour=colors[4],
+                    bar_colour=f'{colors[7]}.60',
                     background=colors[0],
                     decorations=[rounded_decoration],
                     bar_height=12,
@@ -150,17 +144,26 @@ screens = [
                     decorations=[rounded_decoration],
                 ),
                 spacer1,
+                widget.CurrentLayoutIcon(
+                    foreground=colors[7],
+                    background=colors[0],
+                    use_mask=True,
+                    scale=0.4,
+                    decorations=[rounded_decoration],
+                ),
+                spacer1,
                 widget.QuickExit(
                     font="Symbols Nerd Font Mono",
                     default_text=' ⏻ ',
-                    foreground=colors[0],
-                    background=colors[2],
+                    foreground=colors[7],
+                    background=f'{colors[6]}.20',
                     decorations=[rounded_decoration],
                 ),
+                spacer1,
             ],
-            28,
-            margin=[8, 8, 10, 8],
-            background="#000000.00",
+            36,
+            margin=[0, 0, 10, 0],
+            background=TRANSLUCENT_HEX,
         ),
     ),
 ]

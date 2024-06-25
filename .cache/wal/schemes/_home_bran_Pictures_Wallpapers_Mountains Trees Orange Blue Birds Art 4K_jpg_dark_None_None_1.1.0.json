@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/bran/Pictures/Wallpapers/Mountains Trees Orange Blue Birds Art 4K.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#1e1923",
+        "foreground": "#f6e9e2",
+        "cursor": "#f6e9e2"
+    },
+    "colors": {
+        "color0": "#1e1923",
+        "color1": "#5F659C",
+        "color2": "#887CAF",
+        "color3": "#7B85B9",
+        "color4": "#8F8BB9",
+        "color5": "#B3A4CA",
+        "color6": "#FFD1D0",
+        "color7": "#f6e9e2",
+        "color8": "#aca39e",
+        "color9": "#5F659C",
+        "color10": "#887CAF",
+        "color11": "#7B85B9",
+        "color12": "#8F8BB9",
+        "color13": "#B3A4CA",
+        "color14": "#FFD1D0",
+        "color15": "#f6e9e2"
+    }
+}

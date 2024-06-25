@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/bran/Pictures/Wallpapers/material-arch.png",
+    "alpha": "100",
+    "special": {
+        "background": "#00334D",
+        "foreground": "#e2eef4",
+        "cursor": "#e2eef4"
+    },
+    "colors": {
+        "color0": "#00334D",
+        "color1": "#60C9F8",
+        "color2": "#90B2C3",
+        "color3": "#90D2F3",
+        "color4": "#AFD3E5",
+        "color5": "#B2E4FB",
+        "color6": "#C4DCE7",
+        "color7": "#e2eef4",
+        "color8": "#9ea6aa",
+        "color9": "#60C9F8",
+        "color10": "#90B2C3",
+        "color11": "#90D2F3",
+        "color12": "#AFD3E5",
+        "color13": "#B2E4FB",
+        "color14": "#C4DCE7",
+        "color15": "#e2eef4"
+    }
+}

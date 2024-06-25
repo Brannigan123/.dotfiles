@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/bran/Pictures/Wallpapers/cat_pacman.png",
+    "alpha": "100",
+    "special": {
+        "background": "#12121b",
+        "foreground": "#bfe0f0",
+        "cursor": "#bfe0f0"
+    },
+    "colors": {
+        "color0": "#12121b",
+        "color1": "#9C748D",
+        "color2": "#76A8BC",
+        "color3": "#F0A69E",
+        "color4": "#A7E2B0",
+        "color5": "#BAB3D3",
+        "color6": "#86D2E1",
+        "color7": "#bfe0f0",
+        "color8": "#859ca8",
+        "color9": "#9C748D",
+        "color10": "#76A8BC",
+        "color11": "#F0A69E",
+        "color12": "#A7E2B0",
+        "color13": "#BAB3D3",
+        "color14": "#86D2E1",
+        "color15": "#bfe0f0"
+    }
+}
